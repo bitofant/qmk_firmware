@@ -133,3 +133,5 @@ via*.json
 
 # bitofant
 make-macro.txt
+!/keyboards/zsa/moonlander/keymaps/bit**
+
