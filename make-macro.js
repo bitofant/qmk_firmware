@@ -4,12 +4,12 @@ const { argv } = require('node:process');
 const macro = argv[argv.length - 1];
 console.log(`creating macro for: ${macro}`);
 
-let output = "";
-
+let output = "SEND_STRING(";
 for (let i = 0; i < macro.length; ++i) {
     let letter = macro[i];
     output += (i > 0 ? " SS_DELAY(MACRO_DELAY) " : "") + tapKey(letter);
 }
+output += ");";
 
 /**
  * @see <a href="quantum/send_string_keycode.h">send_string_keycode.h</a>
