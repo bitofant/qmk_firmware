@@ -7,7 +7,7 @@
 #define TAPPING_TERM 135
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
-#define SERIAL_NUMBER "QXQ6n/JbGm7"
+#define SERIAL_NUMBER "QXQ6n/adrK3"
 #define LAYER_STATE_8BIT
 #define HCS(report) host_consumer_send(record->event.pressed ? report : 0); return false
 
