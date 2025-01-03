@@ -18,6 +18,7 @@ static HSV SOLID_REACTIVE_WIDE_math(HSV hsv, int16_t dx, int16_t dy, uint8_t dis
     hsv.h = scale16by8(g_rgb_timer, qadd8(rgb_matrix_config.speed, 8) >> 4);
 #            endif
     hsv.v = qadd8(hsv.v, 255 - effect);
+    if (hsv.v < 64) hsv.v = 64;
     return hsv;
 }
 

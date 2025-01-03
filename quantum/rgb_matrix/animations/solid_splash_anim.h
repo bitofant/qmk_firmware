@@ -15,6 +15,7 @@ HSV SOLID_SPLASH_math(HSV hsv, int16_t dx, int16_t dy, uint8_t dist, uint16_t ti
     uint16_t effect = tick - dist;
     if (effect > 255) effect = 255;
     hsv.v = qadd8(hsv.v, 255 - effect);
+    if (hsv.v < 64) hsv.v = 64;
     return hsv;
 }
 
