@@ -22,6 +22,7 @@ static HSV SOLID_REACTIVE_NEXUS_math(HSV hsv, int16_t dx, int16_t dy, uint8_t di
     hsv.h = rgb_matrix_config.hsv.h + dy / 4;
 #            endif
     hsv.v = qadd8(hsv.v, 255 - effect);
+    if (hsv.v < 64) hsv.v = 64;
     return hsv;
 }
 
